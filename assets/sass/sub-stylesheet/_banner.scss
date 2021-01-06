@@ -1,0 +1,88 @@
+//*===== banner area start ====*//
+.banner-area{
+    min-height: 700px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #EFF4F8;
+    background-image: url(/assets/img/banner/01.png);
+    @include breakpoint (md){
+        max-height: 700px;
+        width: 100%;
+        overflow: hidden;
+        background-color: #EFF4F8;
+        background-image: url(/assets/img/banner/01.png);
+    }
+    .banner-content{
+        margin-top: 250px;
+        @include breakpoint (md){
+            position: relative;
+            margin-top:40%;
+        }
+        h4  {
+            width: 200px;
+        }
+        h1{
+            text-transform: uppercase;
+            background: linear-gradient(to right,  #F5454F , #FDA350 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;            
+            font-family: "Lato";
+            letter-spacing: 0px;
+            padding: 0;
+            margin: 0;
+            font-size: 45px;
+            font-weight: 800;
+
+            @include breakpoint (md){
+                text-transform: uppercase;
+                background: linear-gradient(to right,  #F5454F , #FDA350 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;            
+                font-family: "Lato";
+                letter-spacing: 2px;
+                padding: 0;
+                margin: 0;
+                font-size: 80px;
+                font-weight: 1000;
+            }
+            
+        }
+        h6{
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .hire-port-btn{
+            .hire-btn, .portfolio-btn{
+                padding: 10px 20px;
+                margin: 5px;
+                border-radius: 3px;
+                border: 1px solid rgb(85, 85, 85);
+                font-weight: bold;
+                background: transparent;
+            }
+            .hire-btn{
+                background-color: #F5454F;
+                color: white;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    background-color: #F97050;
+                }
+            }
+            .portfolio-btn:hover{
+                background-color: #FDA350;
+                color: white;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    .banner-img{
+        img{
+            margin-top: 15px;
+            // padding: 10% 0px;
+            // width: 100%;
+            height: auto;
+        }
+    }
+}
+//*===== banner area start ====*//

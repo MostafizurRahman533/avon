@@ -2,16 +2,26 @@
     min-height: 700px;
     overflow: hidden;
     background-color: #EFF4F8;
+    position: relative;
     background-image: url(/assets/img/banner/01.png);
-    @include breakpoint (md){
+    @include breakpoint (xl){
         position: relative;
         max-height: 700px;
+        background-image: none;
         width: 100%;
         overflow: hidden;
-        background-image: url(/assets/img/banner/01.png);
-        background-color: #EFF4F8;
-        
-        
+        background-color: #EFF4F8;        
+    }
+    
+    .back-parallax{
+        display: none;
+        @include breakpoint (xl){
+            display: block;
+            background-image: url(/assets/img/banner/01.png);
+            position: absolute;
+            width: 100%;
+            height: 700px;
+        }
     }
     .banner-content{
         margin-top: 250px;
@@ -86,5 +96,6 @@
             height: auto;
         }
     }
+    
 }
 //*===== banner area start ====*//

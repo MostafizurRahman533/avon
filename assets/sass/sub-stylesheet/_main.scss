@@ -819,6 +819,7 @@
           border: none;
           padding: 15px;
           margin: 10px;
+          border-radius: 8px;
         }
         border: none;
         padding: 15px 0;
@@ -917,7 +918,7 @@ footer{
 //**==== scroolTop ======**//
 .scrollToTop {
   position: fixed;
-  bottom: -50%;
+  bottom: -30%;
   right: 5%;
   z-index: 9;
   width: 40px;
@@ -929,8 +930,6 @@ footer{
   color: white;
   font-size: 24px;
   animation: lab_top_up 5s linear infinite;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
   transition: all 0.3s ease; 
   &:hover {
       background: linear-gradient(to right, #FDAA52, #FDAA52); 

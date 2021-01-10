@@ -1103,6 +1103,65 @@ header .menu-are .menu-bar .menu-list nav ul a {
   width: 10px;
 }
 
+.experince-area .section-header {
+  padding: 70px 0;
+}
+
+.experince-area .section-header h2 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.experince-area .section-header p {
+  color: #B2B1B1;
+}
+
+.experince-area .massage-item {
+  margin-bottom: 25px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.experince-area .massage-item .massage-box {
+  border: 1px solid #FDAA52;
+}
+
+.experince-area .massage-item .massage-box p {
+  padding: 10px;
+}
+
+.experince-area .massage-item .massge-icon {
+  position: absolute;
+  content: '';
+  height: 135%;
+  border-left: 1px solid #F5454F;
+  left: 0px;
+  top: 10px;
+}
+
+.experince-area .massage-item .massge-icon::after {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #F5454F;
+  content: "";
+  left: -8px;
+}
+
+.experince-area .massage-item .massge-icon::before {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-left: 1px solid #FDAA52;
+  border-bottom: 1px solid #FDAA52;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  content: "";
+  left: 31.5px;
+  background-color: white;
+}
+
 .working-process {
   margin: 100px 0 0 0;
   padding: 0px 0 100px 0;

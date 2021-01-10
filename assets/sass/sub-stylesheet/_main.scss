@@ -596,6 +596,60 @@
 }
 // ** testimonial-area end** //
 
+// ** experience-area start ** //
+  .experince-area{
+    .section-header{
+      padding: 70px 0;
+      h2{
+          margin: 0;
+          font-weight: bold;
+      }
+      p{
+          color: #B2B1B1;
+      }
+    }
+    .massage-item{
+      margin-bottom: 25px;
+      padding-left: 40px;
+      position: relative;
+      .massage-box{
+        border: 1px solid #FDAA52;
+        p{
+          padding: 10px;
+        }
+      }
+      .massge-icon{
+        position: absolute;
+        content: '';
+        height: 135%;
+        border-left: 1px solid #F5454F;
+        left: 0px;
+        top: 10px;
+        &::after{
+          position: absolute;
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          background-color: #F5454F;
+          content: "";
+          left: -8px;
+        }
+        &::before{
+          
+          position: absolute;
+          height: 15px;
+          width: 15px;
+          border-left: 1px solid #FDAA52;
+          border-bottom: 1px solid #FDAA52;
+          transform: rotate(45deg);
+          content: "";
+          left: 31.5px;
+          background-color: white;
+        }
+      }
+    }
+  }
+// ** experience-area start ** //
 // ** working-process-area start ** //
   .working-process{
     margin: 100px 0 0 0;

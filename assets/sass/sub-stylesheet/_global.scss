@@ -33,12 +33,20 @@ Typography
     box-sizing: border-box;
     outline: none;
     border: none;
+    scroll-behavior: smooth;
 }
 body {
     position: relative;
+    scroll-behavior: smooth;
     .section {
         transition: all 0.5s ease-in-out;
     }
+}
+body.overflow{
+  overflow: hidden;
+  @include breakpoint (lg) {
+    overflow: initial;
+  }
 }
 
 

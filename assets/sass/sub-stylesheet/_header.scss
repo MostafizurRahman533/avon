@@ -5,6 +5,25 @@ header{
             display: flex;
             align-items: center;
             justify-content: space-between;
+                .overlay {
+                    width: 100vw;
+                    height: 100vh;
+                    position: absolute;
+                    top: 0;
+                    left: 100vw;
+                    display: none;
+                    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+                    background: rgba(146, 75, 27, 0.2);
+                    transition: all 0.3s ease-in-out;
+                    z-index: 3;
+                    &.active {
+                        left: 0;
+                        display: block;
+                        @include breakpoint (lg) {
+                            display: none;
+                        }
+                    }
+                }
             .menu-list{
 
                 display: flex;
@@ -13,6 +32,7 @@ header{
                    display: inline-flex;
                    justify-content: space-around;
                    align-items: center;
+                  
                   .mobile-bar{
                       padding: 20px 10px;
                       cursor: pointer;
@@ -28,6 +48,7 @@ header{
                   }
                   ul.close{
                       left: 0;
+                      z-index: 9;
                     @include breakpoint(lg){
                       transform-origin: right;
                       transform: scaleX(0);
@@ -42,7 +63,7 @@ header{
                         top: 0;
                         width: 300px;
                         height: 100vh;
-                        z-index: 1;
+                        z-index: 5;
                         background-image: linear-gradient(to right, #F5454F , #FDA350);
                         text-align: center;
                         position: absolute;
@@ -56,6 +77,31 @@ header{
                             color: white;
                             font-size: 18px;
                             font-weight: 600;
+                        }
+                        @include breakpoint (max-mobile){
+                            transition: all 0.3s ease-in-out;
+                            padding: 0;
+                            margin: 0;
+                            display: inline-block;
+                            left: -270px;
+                            top: 0;
+                            width: 270px;
+                            height: 100vh;
+                            z-index: 5;
+                            background-image: linear-gradient(to right, #F5454F , #FDA350);
+                            text-align: center;
+                            position: absolute;
+                            li{
+                                height: 50px;
+                                line-height: 50px;
+                                list-style: none;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: white;
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
                         }
                         @include breakpoint(lg){
                             transform: scaleX(1);
@@ -88,32 +134,12 @@ header{
                                         
                                     }
                                 }
-                            }
-                            
-                            
-                            
-                        }
-                                               
-                        
-                    }
-                    
-                }
-                // .mobile-bar{
-                //     @include breakpoint (lg){
-                //         display: none;
-                //     }
-                // }
-               
+                            }                                   
+                        }                       
+                    }                    
+                }              
             }
-
-        }
-        // .overlay{
-        //     width: 100vw;
-        //     height: 100vh;
-        //     background-color: red;
-        //     overflow: hidden;
-        //     position: absolute;
-        // }
+        }        
     }
 }
 //*======= header css ends  =====*//

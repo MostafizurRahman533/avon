@@ -1,22 +1,24 @@
-//*===== banner area start ====*//
 .banner-area{
     min-height: 700px;
-    width: 100%;
     overflow: hidden;
     background-color: #EFF4F8;
     background-image: url(/assets/img/banner/01.png);
     @include breakpoint (md){
+        position: relative;
         max-height: 700px;
         width: 100%;
         overflow: hidden;
-        background-color: #EFF4F8;
         background-image: url(/assets/img/banner/01.png);
+        background-color: #EFF4F8;
+        
+        
     }
     .banner-content{
         margin-top: 250px;
         @include breakpoint (md){
             position: relative;
             margin-top:40%;
+            z-index: 99;
         }
         h4  {
             width: 200px;
@@ -64,6 +66,7 @@
             .hire-btn{
                 background-color: #F5454F;
                 color: white;
+                border: none;
                 transition: all 0.3s ease-in-out;
                 &:hover{
                     background-color: #F97050;
@@ -73,14 +76,13 @@
                 background-color: #FDA350;
                 color: white;
                 transition: all 0.3s ease-in-out;
+                border: 1px solid  #FDA350;
             }
         }
     }
     .banner-img{
         img{
             margin-top: 15px;
-            // padding: 10% 0px;
-            // width: 100%;
             height: auto;
         }
     }

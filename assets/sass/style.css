@@ -1126,8 +1126,18 @@ header .menu-are .menu-bar .menu-list nav ul a {
   border: 1px solid #FDAA52;
 }
 
+.experince-area .massage-item .massage-box .header-content {
+  padding: 5px 15px;
+}
+
+.experince-area .massage-item .massage-box .header-content h4 {
+  padding: 0 0;
+  margin: 0;
+}
+
 .experince-area .massage-item .massage-box p {
-  padding: 10px;
+  padding: 5px 15px;
+  color: #b3b3b3;
 }
 
 .experince-area .massage-item .massge-icon {
@@ -1144,12 +1154,70 @@ header .menu-are .menu-bar .menu-list nav ul a {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: #F5454F;
+  background-image: -webkit-gradient(linear, left top, right top, from(#F5454F), to(#FDAA52));
+  background-image: linear-gradient(to right, #F5454F, #FDAA52);
   content: "";
   left: -8px;
 }
 
 .experince-area .massage-item .massge-icon::before {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-left: 1px solid #FDAA52;
+  border-bottom: 1px solid #FDAA52;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  content: "";
+  left: 32px;
+  background-color: white;
+}
+
+.experince-area .massage-item2 {
+  margin-bottom: 25px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.experince-area .massage-item2 .massage-box {
+  border: 1px solid #FDAA52;
+}
+
+.experince-area .massage-item2 .massage-box .header-content {
+  padding: 5px 15px;
+}
+
+.experince-area .massage-item2 .massage-box .header-content h4 {
+  padding: 0 0;
+  margin: 0;
+}
+
+.experince-area .massage-item2 .massage-box p {
+  padding: 5px 15px;
+  color: #b3b3b3;
+}
+
+.experince-area .massage-item2 .massge-icon {
+  position: absolute;
+  content: '';
+  height: 0%;
+  border-left: 1px solid #F5454F;
+  left: 0px;
+  top: 10px;
+}
+
+.experince-area .massage-item2 .massge-icon::after {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#F5454F), to(#FDAA52));
+  background-image: linear-gradient(to right, #F5454F, #FDAA52);
+  content: "";
+  left: -8px;
+}
+
+.experince-area .massage-item2 .massge-icon::before {
   position: absolute;
   height: 15px;
   width: 15px;

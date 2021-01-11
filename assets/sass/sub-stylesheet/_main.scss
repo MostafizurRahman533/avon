@@ -614,8 +614,16 @@
       position: relative;
       .massage-box{
         border: 1px solid #FDAA52;
+        .header-content{
+          padding: 5px 15px;
+          h4{
+            padding: 0 0;
+            margin: 0;
+          }
+        }
         p{
-          padding: 10px;
+          padding: 5px 15px;
+          color: #b3b3b3;
         }
       }
       .massge-icon{
@@ -630,7 +638,56 @@
           height: 15px;
           width: 15px;
           border-radius: 50%;
-          background-color: #F5454F;
+          background-image: linear-gradient(to right,  #F5454F , #FDAA52);
+          content: "";
+          left: -8px;
+        }
+        &::before{
+          
+          position: absolute;
+          height: 15px;
+          width: 15px;
+          border-left: 1px solid #FDAA52;
+          border-bottom: 1px solid #FDAA52;
+          transform: rotate(45deg);
+          content: "";
+          left: 32px;
+          background-color: white;
+        }
+      }
+      
+    }
+    .massage-item2{
+      margin-bottom: 25px;
+      padding-left: 40px;
+      position: relative;
+      .massage-box{
+        border: 1px solid #FDAA52;
+        .header-content{
+          padding: 5px 15px;
+          h4{
+            padding: 0 0;
+            margin: 0;
+          }
+        }
+        p{
+          padding: 5px 15px;
+          color: #b3b3b3;
+        }
+      }
+      .massge-icon{
+        position: absolute;
+        content: '';
+        height: 0%;
+        border-left: 1px solid #F5454F;
+        left: 0px;
+        top: 10px;
+        &::after{
+          position: absolute;
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          background-image: linear-gradient(to right,  #F5454F , #FDAA52);
           content: "";
           left: -8px;
         }
@@ -647,6 +704,7 @@
           background-color: white;
         }
       }
+      
     }
   }
 // ** experience-area start ** //

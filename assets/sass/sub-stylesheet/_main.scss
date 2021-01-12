@@ -5,7 +5,7 @@
     .card-are{
         box-shadow: 0px 0px 19px 8px rgba(100, 100, 100, 0.1);
         .professional-image{
-            background-color: #EFF4F8;
+            background-color: $background-color;
             max-height: 450px;
             overflow: hidden;
             img{
@@ -19,7 +19,7 @@
         .professional-conatent{
             padding: 20px 0;
             .professional-text{
-                color: #959595;
+                color: $text-color;
             }
             table{
                 tr{
@@ -41,7 +41,7 @@
                         display: inline-flex;
                         padding: 5px;
                         margin: 0;
-                        color: #959595;
+                        color: $text-color;
                     }
                 }
             }
@@ -75,7 +75,7 @@
   background-image: url('/assets/img/searvice/01.svg');
   background-size: cover;
   background-image: cover;
-  background-color: #EFF4F8;
+  background-color: $background-color;
   background-repeat: no-repeat;
   background-position: bottom;
     @include breakpoint (md){
@@ -84,7 +84,7 @@
       background-image: url('/assets/img/searvice/01.svg');
       background-repeat: no-repeat;
       background-position: bottom;
-      background-color: #EFF4F8;
+      background-color: $background-color;
     }
     .service-card{
         padding: 100px 0;
@@ -93,11 +93,14 @@
                 font-size: 36px;
                 font-weight: bold;
             }
+            P{
+              color: $text-color;
+            }
           .service-container{
               .slider-button{
                   position: relative;
                   display: flex;
-                  .arrow-next,.arrow-prev{
+                  .swiper-button-befor,.swiper-button-after{
                       color: #F5454F;
                       padding: 0 20px 0 0;
                       font-size: 25px;
@@ -170,7 +173,7 @@
             font-weight: bold;
         }
         p{
-            color: #B2B1B1;
+            color: $text-color;
         }
     }
     .filter-area{
@@ -186,7 +189,7 @@
       margin: 0;
     }
     li.active{
-      background-color: #F5454F;
+      background-color: $theme-color;
       .category{
         color: white;
       }
@@ -207,7 +210,7 @@
         line-height: 38px;
       }
       &:hover{
-        background-color: #F5454F;
+        background-color: $theme-color;
         transition: all 0.3s ease-in-out;
         .category{
           color: white;
@@ -215,12 +218,7 @@
       }
      
       .active{
-        background-color: #F5454F !important;
-        .amount {
-          border-color: #92278f;
-          background: #92278f;
-          color: #fff;
-        }
+        background-color: $theme-color;
       }
       .category {
         color: black;
@@ -238,6 +236,7 @@
 .masonary-item {
   width: 100%;
   padding: 0px 0;
+  height: auto;
   img{
     width: 100%;
     padding: 10px;
@@ -251,40 +250,6 @@
   box-shadow: 0px 2px 4px 0px rgba(79, 63, 82, 0.06);
   background: #fff;
   padding: 8px;
-}
-.masonary-item .masonary-thumb::before {
-  position: absolute;
-  content: "";
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
-  top: 8px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  background: rgba(146, 39, 143, 0.8);
-  -webkit-transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s;
-  transition: all ease 0.3s;
-  opacity: 0;
-}
-.masonary-item .masonary-thumb a {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  color: #92278f;
-  background: #fff;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  opacity: 0;
-}
-.masonary-item .masonary-thumb img {
-  width: 100%;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
 }
 .masonary-item .masonary-thumb:hover::before {
   opacity: 1;
@@ -328,10 +293,10 @@
 .work-area{
   min-height: 450px;
   margin: 100px 0 0 0;
-  background-color: #EFF4F8;
+  background-color: $background-color;
   @include breakpoint (md){
     margin: 100px 0 0 0;
-    background-color: #EFF4F8;
+    background-color: $background-color;
     height: 450px;
     width: 100%;
     overflow: hidden;
@@ -345,7 +310,7 @@
       }
       p{
         padding: 20px 0;
-        color: #7A7A7A;
+        color: $text-color;
       }
       .hire-btn{
         text-decoration: none;
@@ -574,7 +539,7 @@
                   color: #F0F0F0;
                 }
                 .testimonial-content{
-                  color: #8D8D8D;
+                  color: $text-color;
                 }
               }
               
@@ -605,7 +570,7 @@
           font-weight: bold;
       }
       p{
-          color: #B2B1B1;
+          color: $text-color;
       }
     }
     .massage-item{
@@ -623,7 +588,7 @@
         }
         p{
           padding: 5px 15px;
-          color: #b3b3b3;
+          color: $text-color;
         }
       }
       .massge-icon{
@@ -672,7 +637,7 @@
         }
         p{
           padding: 5px 15px;
-          color: #b3b3b3;
+          color: $text-color;
         }
       }
       .massge-icon{
@@ -712,7 +677,7 @@
   .working-process{
     margin: 100px 0 0 0;
     padding: 0px 0 100px 0;
-    background-color: #EFF4F8;
+    background-color: $background-color;
     .section-header{
       padding: 70px 0;
       h2{
@@ -720,7 +685,7 @@
           font-weight: bold;
       }
       p{
-          color: #B2B1B1;
+          color: $text-color;
       }
     }
     .brefing-icon-area{
@@ -744,7 +709,7 @@
         }
         p{
           padding: 0;
-          color: #999999;
+          color: $text-color;
         }
       }
       .box-item-2{
@@ -759,7 +724,7 @@
         }
         p{
           padding: 0;
-          color: #999999;
+          color: $text-color;
         }
       }
       @include breakpoint(xl){
@@ -777,7 +742,7 @@
           }
           p{
             padding: 0;
-            color: #999999;
+            color: $text-color;
           }
         }
         .box-item-2{
@@ -792,7 +757,7 @@
           }
           p{
             padding: 0;
-            color: #999999;
+            color: $text-color;
           }
         }
       }
@@ -810,7 +775,7 @@
           font-weight: bold;
       }
       p{
-          color: #B2B1B1;
+          color: $text-color;
       }
     }
     .blog-slider{
@@ -843,7 +808,7 @@
                     .card-content{
                       padding: 20px;
                       p{
-                        color: #b3b3b3;
+                        color: $text-color;
                       }
                       h4{
                         color: black;
@@ -885,7 +850,7 @@
 
 // ** content-area start ** //
   .contant-area{
-    background-color: #EFF4F8;
+    background-color: $background-color;
     margin: 100px 0 0 0;
     padding: 0 0 100px 0; 
     .section-header{
@@ -895,7 +860,7 @@
           font-weight: bold;
       }
       p{
-          color: #B2B1B1;
+          color: $text-color;
       }
     }
     .flex-fild{
@@ -939,18 +904,18 @@
         margin: 10px 0;
       }
       .btn-avon{
-        background-color: #F5454F;        
+        background-color: $theme-color;        
         font-weight: bold;
         color: white;
         margin: 0 0 10px 0;
         @include breakpoint (md){
-          background-color: #F5454F;
+          background-color: $theme-color;
           margin: 0 26px;
           font-weight: bold;
           color: white;
           width: 95%;
           &:hover{
-            background-color: #FDAA52;
+            background-color: $theme-color-two;
           }
         }
       }
@@ -965,8 +930,8 @@
         height: 50px;
       }
       P{
-        font-size: 18PX;
-        font-weight: bold;
+        font-size: 18px;
+        color: $text-color;
       }
     }
   }

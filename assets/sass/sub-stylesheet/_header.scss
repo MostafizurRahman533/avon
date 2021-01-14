@@ -37,47 +37,92 @@ header{
                       padding: 20px 10px;
                       cursor: pointer;
                   }
-                  .social-icon{
-                      display: none;
-                      @include breakpoint(lg){
-                          display: flex;
-                      }
-                      a{
-                          padding: 20px 5px;
-                      }
-                  }
+                  
                   .search-icon{
                       overflow: hidden;
-                    .search-area{
-                        position: absolute;                        
-                        width: 100%;
-                        height: 100vh;
-                        background-color: #f5454e25;
-                        left: 0;
-                        top: 0;
-                        z-index: 999;
-                        .search-box{
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            .search-form{
-                                padding: 10px 15px;
-                                border: none;
-                                background-color: transparent;
-                                text-decoration: none;
-                                width: 150px;
-                               &:focus{
-                                   transition: all 0.1s ease-in-out;
-                                    border-bottom: 2px solid #FDA350;
-                               }
+                      .search-image{
+                          display: block;
+                          cursor: pointer;
+                          padding: 20px 5px;
+                      }
+                      form{
+                          .search-area{
+                            transform: scale(0);
+                            transition: all 0.3s ease-in-out;
+                            position: absolute;                        
+                            width: 100%;
+                            height: 100vh;                            
+                            left: 0;
+                            z-index: 9;
+                            top: 0;
+                            .search-overlay{
+                                position: absolute;
+                                background-image: linear-gradient(to right, #f5454e3a, #fda45049,);
+                                height: 100vh;
+                                width: 100%;
+                                z-index: 10;
                             }
-                        }
-                    }
-                      
+                            .cross-overlay{
+                                position: absolute;
+                                z-index: 12;
+                                color: #F5454F;
+                                top: 20px;
+                                right: 20px;
+                                cursor: pointer;
+                            }
+                            .search-box{                                
+                                position: absolute;
+                                top: 47%;
+                                left: 15%;
+                                z-index: 11;
+                                @include breakpoint (max-mobile){
+                                    left: 15%;
+                                }
+                                @include breakpoint (sm){
+                                    left: 25%;
+                                }
+                                @include breakpoint (md){      
+                                    left: 35%;
+                                }
+                                @include breakpoint (lg){
+                                    left: 40%;
+                                } 
+                                @include breakpoint (xl){
+                                    left: 45%;
+                                }
+                                .search-form{
+                                    padding: 10px 15px;
+                                    border-bottom: 2px solid #d7d7d7;
+                                    background-color: transparent;
+                                    text-decoration: none;
+                                    width: 250px;
+                                    @include breakpoint (max-mobile){
+                                        width: 200px;
+                                    }
+                                   &:focus{
+                                       transition: all 0.1s ease-in-out;
+                                        border-bottom: 2px solid #FDA350;
+                                   }
+                                }
+                                .search-btn{
+                                    padding: 10px 15px;
+                                    background-color: #F5454F;
+                                    color: white;
+                                    transition: all 0.3s ease-in-out;
+                                    &:hover{
+                                        background-color: #FDA350;
+                                    }                               
+                                }
+                            }
+                          }
+                          .search-area.open{
+                              transform: scale(1);
+                          }
+                      }
                     }
                   ul.close{
                       left: 0;
-                      z-index: 9;
+                      z-index: 99;
                     @include breakpoint(lg){
                       transform-origin: right;
                       transform: scaleX(0);
@@ -92,7 +137,7 @@ header{
                         top: 0;
                         width: 300px;
                         height: 100vh;
-                        z-index: 5;
+                        z-index: 15;
                         background-image: linear-gradient(to right, #F5454F , #FDA350);
                         text-align: center;
                         position: absolute;
@@ -165,7 +210,17 @@ header{
                                 }
                             }                                   
                         }                       
-                    }                    
+                    }
+                    .social-icon{
+                        display: none;
+                        @include breakpoint (lg){
+                            display: flex;
+                            a{
+                                padding: 20px 5px;
+                            }
+                        }
+                    }
+                                        
                 }              
             }
         }        

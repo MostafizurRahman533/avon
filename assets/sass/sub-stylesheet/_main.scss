@@ -598,6 +598,12 @@
         border-left: 1px solid #F5454F;
         left: 0px;
         top: 10px;
+        @include breakpoint (max-xl) {
+          height: 120%;
+        }
+        @include breakpoint (max-sm){
+          height: 113%;
+        }
         &::after{
           position: absolute;
           height: 15px;
@@ -993,6 +999,102 @@ footer{
   }
 }
 // ** footer-area end ** //
+
+// ** blog page area **//
+
+// ** page-header-area start **//
+.page-header-area{
+  height: 250px;
+  background-image: url('../../../assets/img/blog_header/01.png');
+  background-size: cover;
+  .banner-position{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 250px;
+    .section-header{
+      display: block;
+      .header-content{
+        color: white;
+      }
+      .sub-text{
+        color: white;
+      }
+    }
+  }
+ 
+}
+// ** page-header-area start **//
+
+//** section-body start **//
+.section-body{
+  background-color: $background-color;
+  padding: 150px 0;
+  .blog-area{
+    padding: 15px 25px;
+    background-color: white;
+    margin-bottom: 50px;
+    p{
+      color: $text-color;
+      a{
+        color: $text-color;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        &:hover{
+          color: $theme-color;
+        }
+      }
+    }
+    h2{
+      font-weight: bold;
+    }
+    img{
+      height: auto;
+      width: 100%;
+    }
+    .blog-links{
+      display: flex;
+      justify-content: space-between;
+      .social-links{
+        display: flex;
+        a{
+          margin: 0 10px;
+        }
+      }
+    }
+    .blog-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+    }
+
+
+  }
+}
+//** section-body end **//
 //**==== scroolTop ======**//
 .scrollToTop {
   position: fixed;

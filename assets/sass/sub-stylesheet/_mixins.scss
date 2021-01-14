@@ -36,6 +36,9 @@
     @else if $point == max-mobile {
         @media (max-width: 375px) { @content ; }
     }
+    @else if $point == min-mobile {
+        @media (min-width: 375px) { @content ; }
+    }
     @else if $point == mobile {
         @media (max-width: 425px) { @content ; }
     }

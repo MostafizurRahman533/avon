@@ -2,12 +2,13 @@
 (function($){
     'use strict';
     	// mobile menu responsive
-	$(document).on('click','.mobile-bar',function(){
+      $(document).on('click','.mobile-bar',function(){
         $("ul").toggleClass("close");
             $(".main-menu").toggleClass("open");
             $(".overlay").addClass("active");
             $("body").addClass("overflow");
         });
+
         // overlay remove
         $('.overlay').on('click', function(){
           $('body,ul,.mobile-bar').removeClass('close');
@@ -15,22 +16,39 @@
           $('body,ul,.overlay').removeClass('active');
           $('body').removeClass('overflow');
         });
-	// scroll up start here
-	$(function(){
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-				$('.scrollToTop').css({'bottom':'2%', 'opacity':'1','transition':'all .5s ease'});
-			} else {
-				$('.scrollToTop').css({'bottom':'-30%', 'opacity':'0','transition':'all .5s ease'});
-			}
-		});
-		//Click event to scroll to top
-		$('.scrollToTop').on('click', function(){
-			$('html, body').animate({scrollTop : 0},500);
-			return false;
-		});
-	});
-    
+
+        //search area
+        $(document).on('click','.search-image',function(){
+          $(".search-area").addClass("open");
+          $("body").addClass("scroll-lock");
+        });
+        
+        $(document).on('click','.search-overlay',function(){
+          $(".search-area").removeClass("open");
+          $("body").removeClass("scroll-lock");
+        });
+
+        $(document).on('click','.cross-overlay',function(){
+          $(".search-area").removeClass("open");
+          $("body").removeClass("scroll-lock");
+        });
+
+      // scroll up start here
+      $(function(){
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 300) {
+            $('.scrollToTop').css({'bottom':'2%', 'opacity':'1','transition':'all .5s ease'});
+          } else {
+            $('.scrollToTop').css({'bottom':'-30%', 'opacity':'0','transition':'all .5s ease'});
+          }
+        });
+        //Click event to scroll to top
+        $('.scrollToTop').on('click', function(){
+          $('html, body').animate({scrollTop : 0},500);
+          return false;
+        });
+      });
+        
         // swiper-service slider js 
         var swiper = new Swiper('.service-container', {
           slidesPerView: 1,
@@ -163,7 +181,8 @@
     }
   });
 
-  // isotop activation filter=
+  
+  // isotop activation
 
   $(document).ready(function(){
       var $gridTwo = $(".masonary-wrapper");
@@ -193,6 +212,22 @@
           $(this).addClass('active');
         });
       }); 
+    });
+
+    // blog-slider
+
+    var swiper = new Swiper('.blog-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
 })(jQuery);
 

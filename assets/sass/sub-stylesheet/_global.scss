@@ -48,7 +48,9 @@ body.overflow{
     overflow: initial;
   }
 }
-
+body.scroll-lock{
+  overflow: hidden;
+}
 
 //? all social media
 

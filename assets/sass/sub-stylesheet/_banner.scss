@@ -24,14 +24,13 @@
         }
     }
     .banner-section{
-        z-index: 999;
         position: relative;
         .banner-content{
             margin-top: 250px;
             @include breakpoint (md){
                 position: relative;
                 margin-top:40%;
-                z-index: 99;
+                z-index: 9;
             }
             h4  {
                 width: 200px;

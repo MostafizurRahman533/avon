@@ -784,11 +784,11 @@
           color: $text-color;
       }
     }
-    .blog-slider{
+    .recent-slider{
       padding: 0 0 50px 0;
       overflow: hidden;
       position: relative;
-      .blog-container{
+      .recent-container{
           .swiper-slide{
             .slider-item{
               .card-box{
@@ -1070,7 +1070,7 @@ footer{
       height: 100%;
       margin-left: auto;
       margin-right: auto;
-      .swiper-slide {
+      .swiper-slide { 
         text-align: center;
         font-size: 18px;
         background: #fff;
@@ -1088,6 +1088,28 @@ footer{
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
+      }
+      .swiper-button-next{
+        background-color: $theme-color;
+        border-radius: 5px;
+        padding: 10px 22px;
+        color: white;
+        &::after{
+          font-size: 25px;
+        }
+      }
+      .swiper-button-prev{
+        background-color: $theme-color;
+        border-radius: 5px;
+        padding: 10px 22px;
+        color: white;
+        &::after{
+          font-size: 25px;
+        }
+      }
+      .swiper-button-disabled{
+        background-color: black !important;
+        opacity: 1;
       }
     }
 
